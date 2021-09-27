@@ -46,7 +46,7 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-// Navigation Menu Selector
+// NAVIGATION Menu Selector
 const navMenuSelector = document.querySelectorAll("nav a");
 
 // Adding Navigation Menu items from siteContent
@@ -67,9 +67,9 @@ headerOne.innerHTML = "DOM<br/> Is<br/> Awesome";
 ctaButton.textContent = siteContent.cta.button;
 ctaImg.src = siteContent.cta["img-src"];
 
-// Section Main Header4s, Paragraphs, and Image Selectors
-const mainHeaderFours = document.querySelectorAll("section.main-content h4");
-const mainParagraphs = document.querySelectorAll("section.main-content p");
+// Section MAIN Header4s, Paragraphs, and Image Selectors
+const mainHeaderFours = document.querySelectorAll("section.main-content h4"); // Array Like
+const mainParagraphs = document.querySelectorAll("section.main-content p"); // Array Like
 const mainImg = document.querySelector("section.main-content img");
 
 // Adding FEATURES Content to Section Main
@@ -94,3 +94,19 @@ mainParagraphs[3].textContent = siteContent["main-content"]["product-content"];
 // Adding VISION Content to Main Section
 mainHeaderFours[4].textContent = siteContent["main-content"]["vision-h4"];
 mainParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
+
+// Section CONTACT Selectors
+const contactHeader = document.querySelector("section.contact h4");
+const contactParagraphs = document.querySelectorAll("section.contact p"); // Array Like
+
+// Adding Content to CONTACT Section
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+contactParagraphs[0].innerHTML = "123 Way 456 Street<br/> Somewhere, USA";
+contactParagraphs[1].textContent = siteContent["contact"]["phone"];
+contactParagraphs[2].textContent = siteContent["contact"]["email"];
+
+// Section Footer Selector
+const footerParagraph = document.querySelector("footer p");
+
+// Adding Content to FOOTER Section
+footerParagraph.textContent = siteContent["footer"]["copyright"];
