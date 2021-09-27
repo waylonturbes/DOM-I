@@ -67,16 +67,10 @@ headerOne.innerHTML = "DOM<br/> Is<br/> Awesome";
 ctaButton.textContent = siteContent.cta.button;
 ctaImg.src = siteContent.cta["img-src"];
 
-// Section Main Top Content Selectors
-const featuresHeader = document.querySelector(
-  "section.main-content div.top-content div.text-content h4"
-);
-const featuresParagraph = document.querySelector(
-  "section.main-content div.top-content div.text-content p"
-);
-const aboutHeader = document.querySelector(
-  "section.main-content div.top-content div.text-content h4"
-);
-const aboutParagraph = document.querySelector(
-  "section.main-content div.top-content div.text-content p"
-);
+// Section Main Header4s, Paragraphs, and Image Selectors
+const mainHeaderFours = document.querySelectorAll("section.main-content h4");
+const mainParagraphs = document.querySelector("section.main-content p");
+
+// Adding FEATURES Content to Section Main
+mainHeaderFours.item(0) = siteContent["main-content"]["features-h4"];
+mainParagraphs.item(0) = siteContent["main-content"]["features-content"];
