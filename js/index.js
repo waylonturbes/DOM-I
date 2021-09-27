@@ -82,3 +82,15 @@ mainParagraphs[1].textContent = siteContent["main-content"]["about-content"];
 
 // Adding Main Section Image
 mainImg.src = siteContent["main-content"]["middle-img-src"];
+
+// Adding SERVICES Content to Main Section
+mainHeaderFours[2].textContent = siteContent["main-content"]["services-h4"];
+mainParagraphs[2].textContent = siteContent["main-content"]["services-content"];
+
+// Adding PRODUCT Content to Main Section
+mainHeaderFours[3].textContent = siteContent["main-content"]["product-h4"];
+mainParagraphs[3].textContent = siteContent["main-content"]["product-content"];
+
+// Adding VISION Content to Main Section
+mainHeaderFours[4].textContent = siteContent["main-content"]["vision-h4"];
+mainParagraphs[4].textContent = siteContent["main-content"]["vision-content"];
