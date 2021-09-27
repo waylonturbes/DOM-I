@@ -47,12 +47,28 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 // NAVIGATION Menu Selector
-const navMenuSelector = document.querySelectorAll("nav a");
+const navItemsSelector = document.querySelectorAll("nav a");
+const navSelector = document.querySelector("nav");
 
 // Adding Navigation Menu items from siteContent
-navMenuSelector.forEach((navItem, index) => {
-  return (navItem.textContent = siteContent.nav[`nav-item-${index + 1}`]);
+navItemsSelector.forEach((navItem, index) => {
+  navItem.textContent = siteContent.nav[`nav-item-${index + 1}`];
+  navItem.style.color = "green";
 });
+
+// Adding NAVIGATION Elements
+const howTo = document.createElement("a");
+const dontClick = document.createElement("a");
+
+// Adding Content to New Elements
+howTo.textContent = "How To";
+howTo.style.color = "green";
+dontClick.textContent = "Don't Click";
+dontClick.style.color = "green";
+
+// Adding New Nav Elements to DOM
+navSelector.appendChild(howTo);
+navSelector.prepend(dontClick);
 
 // Section CTA Selector
 const headerOne = document.querySelector("section.cta div h1");
