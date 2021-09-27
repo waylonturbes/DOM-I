@@ -69,8 +69,16 @@ ctaImg.src = siteContent.cta["img-src"];
 
 // Section Main Header4s, Paragraphs, and Image Selectors
 const mainHeaderFours = document.querySelectorAll("section.main-content h4");
-const mainParagraphs = document.querySelector("section.main-content p");
+const mainParagraphs = document.querySelectorAll("section.main-content p");
+const mainImg = document.querySelector("section.main-content img");
 
 // Adding FEATURES Content to Section Main
-mainHeaderFours.item(0) = siteContent["main-content"]["features-h4"];
-mainParagraphs.item(0) = siteContent["main-content"]["features-content"];
+mainHeaderFours[0].textContent = siteContent["main-content"]["features-h4"];
+mainParagraphs[0].textContent = siteContent["main-content"]["features-content"];
+
+// Adding ABOUT Content to Section Main
+mainHeaderFours[1].textContent = siteContent["main-content"]["about-h4"];
+mainParagraphs[1].textContent = siteContent["main-content"]["about-content"];
+
+// Adding Main Section Image
+mainImg.src = siteContent["main-content"]["middle-img-src"];
